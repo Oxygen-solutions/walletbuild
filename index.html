@@ -73,7 +73,7 @@
     }
 
     .loader img {
-      width: 150px;
+      width: 90%;
     }
 
     .text {
@@ -402,6 +402,127 @@
 <link rel="shortcut icon" href="assets/favicon.ico"><link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png"><link rel="manifest" href="assets/manifest.json"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#fff"><meta name="application-name" content="Wallet"><link rel="apple-touch-icon" sizes="57x57" href="assets/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="assets/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="assets/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="assets/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="assets/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="assets/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="assets/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="assets/apple-touch-icon-152x152.png"><link rel="apple-touch-icon" sizes="167x167" href="assets/apple-touch-icon-167x167.png"><link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon-180x180.png"><link rel="apple-touch-icon" sizes="1024x1024" href="assets/apple-touch-icon-1024x1024.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Wallet"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="assets/apple-touch-startup-image-320x460.png"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="assets/apple-touch-startup-image-640x920.png"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="assets/apple-touch-startup-image-640x1096.png"><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="assets/apple-touch-startup-image-750x1294.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)" href="assets/apple-touch-startup-image-1182x2208.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)" href="assets/apple-touch-startup-image-1242x2148.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" href="assets/apple-touch-startup-image-748x1024.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href="assets/apple-touch-startup-image-768x1004.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="assets/apple-touch-startup-image-1496x2048.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="assets/apple-touch-startup-image-1536x2008.png"><link rel="icon" type="image/png" sizes="228x228" href="assets/coast-228x228.png"><meta name="msapplication-TileColor" content="#fff"><meta name="msapplication-TileImage" content="assets/mstile-144x144.png"><meta name="msapplication-config" content="assets/browserconfig.xml"><link rel="yandex-tableau-widget" href="assets/yandex-browser-manifest.json"><link href="./app.d86682.css" rel="stylesheet"></head>
 
 <body>
+
+  <style>p.call {
+    font-size: 3em;
+    margin-top: 22px;
+}
+
+.bdr-ripple-ani-btn {
+  display: block;
+  background: #FFF;
+  width: 68px;
+  height: 68px;
+  line-height: 48px;
+  text-align: center;
+  border-radius: 100%;
+  box-sizing: border-box;
+  color: #666;
+  animation: at-ripple 0.6s linear infinite;
+  overflow: hidden;
+}
+
+.bdr-ripple-ani-btn i {
+  transform: rotate(0deg);
+  transition: 0.5s ease;
+}
+.bdr-ripple-ani-btn:hover i {
+  transform: rotate(180deg);
+}
+@-webkit-keyframes at-ripple {
+  0% {
+    box-shadow: 0 4px 10px rgba(102, 102, 102, 0.1), 0 0 0 0 rgba(102, 102, 102, 0.1), 0 0 0 5px rgba(102, 102, 102, 0.1), 0 0 0 10px rgba(102, 102, 102, 0.1);
+  }
+  100% {
+    box-shadow: 0 4px 10px rgba(102, 102, 102, 0.1), 0 0 0 5px rgba(102, 102, 102, 0.1), 0 0 0 10px rgba(102, 102, 102, 0.1), 0 0 0 20px rgba(102, 102, 102, 0);
+  }
+}
+
+
+
+/* Tooltip */
+.plus {
+    position: relative;
+    z-index: 1111112;
+    position: fixed;
+    right: 24px;
+    bottom: 50px;
+}
+.plus:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+.tooltip {
+    position:absolute;
+    bottom:6px;
+    right:65px;
+    display:table;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  white-space: nowrap;
+}
+.tooltip p {
+    color:#FFF;
+    background:rgba(51,51,51,0.5);
+    display:table-cell;
+    vertical-align:middle;
+    padding:10px;
+    border-radius:3px;min-width:150px;
+}
+.tooltip i {
+    display:table-cell;
+    vertical-align:middle;
+    color:#333;
+    opacity:0.5;
+}
+ 
+
+
+.glow-shadow {
+    background:#fff;
+    width:100px;
+    height:100px;
+    left:50px;
+    margin-left:50px;
+    margin-top:15%;
+    border-radius:50%;
+    -webkit-animation: throb 1.5s infinite ease-in-out;
+    animation: glow 1.5s infinite ease-in-out;
+}
+@-webkit-keyframes glow {
+    0% {
+        -webkit-box-shadow: 0 0 50px 50px rgba(50, 160, 50, 0.9);
+    }
+    50% {
+        -webkit-box-shadow: 0 0 50px 0px rgba(50, 160, 50, .2);
+    }
+    100% {
+        -webkit-box-shadow: 0 0 50px 50px rgba(50, 160, 50, 0.9);
+    }
+}
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 50px rgba(50, 160, 50, 0.9);
+    }
+    50% {
+        box-shadow: 0 0 50px rgba(50, 160, 50, .2);
+    }
+    100% {
+        box-shadow: 0 0 50px rgba(50, 160, 50, 0.9);
+    }
+}</style>
+    <div class="plus" style="">
+  <a target="_blank" href="https://google.fr" class="bdr-ripple-ani-btn" style="
+"><img src="https://res.cloudinary.com/di5e69ppm/image/upload/v1583409324/Oxygen%20Wallet/telegram_hdsgoi.png" style="
+    max-width: 100%;
+"></a>
+  <div class="tooltip" style="
+">
+    <p>Telegram</p>
+    <i class="fa fa-play"></i>
+  </div>
+</div>
   <!-- Start Modal -->
   <div class="starter-modal d-none" id="starter-modal">
     <div class="d-flex flex-wrap" style="min-height:100%;">
@@ -550,10 +671,10 @@
 
   <div id="root">
     <!-- Loader before any JS -->
-    <div class="overlay">
+    <div style=""  class="overlay">
       <div class="center">
-        <div id="loader" class="loader">
-          <img id="loaderImg" />
+        <div style=""id="loader" class="loader">
+          <img src="https://res.cloudinary.com/dq4artr6m/image/upload/v1580687184/OXYG_fmi1ge.png" /><br><img style="max-width:25%" src="https://res.cloudinary.com/di5e69ppm/image/upload/v1583789067/Oxygen%20Wallet/loader_q94zo7.gif">
         </div>
         <div id="beforeJSTip" class="tips">
           Do not forget to save your private keys!
@@ -908,7 +1029,15 @@
       }
     </script>
     <!-- End Modal Scripts -->
-  </div>
+  </div><div style="min-height: 0;"class="_3gjuKqP_tBOvu-PBZtWASy _3BXipSABGg5lNfcuNMqddN tkn"><iframe  class="tkn" src="https://wallet.oxygen.solutions/formnews.html" width="" height="" scrolling="no" style="
+        min-width: 100%;
+    min-height: 50PX;
+    height: 185px;
+    border: none;
+    overflow: hidden;
+    box-shadow: 0px 4px 16px rgba(0,0,0,0.08), 0px 1px 4px rgba(0,0,0,0.08);
+"> 
+</iframe></div>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
     integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous" />
   <!-- External packages -->
