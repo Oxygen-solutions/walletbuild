@@ -6,8 +6,9 @@ button#depositBtn { background-image: url(https://www.domaine-verdagne.com/img/s
     ._3gjuKqP_tBOvu-PBZtWASy._3BXipSABGg5lNfcuNMqddN.tkn {
     height: 280px!important;
     padding-bottom: 0;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
     padding-left: 5px;
+    margin-top: -80px;
 
 }
 iframe.tkn {
