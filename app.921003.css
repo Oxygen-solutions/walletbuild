@@ -16,13 +16,21 @@ iframe.tkn {
 
 }
 ._1rA_l-cNHQ0ttc__RoGhJ0 {
-            background:none!important;
+            background-image: none!important;
        }
 .swiper-container{
             display:none;
        }
-
-
+button#depositBtn {
+    background-image: none!important;    
+}
+button#sendBtn {
+    background-image: none!important;    
+    
+}
+._31cAASU3Pwdm31vtGvCg {
+    display:none!important;
+}
 }
 
 
