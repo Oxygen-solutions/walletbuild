@@ -18,7 +18,7 @@ iframe.tkn {
 }
 
 
-@media (max-width: 567px)
+@media all and (max-width: 567px)
 ._1rA_l-cNHQ0ttc__RoGhJ0 {
     background:none
 }
